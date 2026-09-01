@@ -46,13 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { title: "First Saas Animation", category: "motion-graphics", duration: "00:03",
       video: "Assets/Videos/First Saas Animation.mp4",
       gradient: "linear-gradient(135deg,#4c1d95,#a855f7)" },
-    { title: "DRAKE MOTION GRAPHICS", category: "motion-graphics", duration: "00:03",
-      video: "Assets/Videos/DRAKE MOTION GRAPHICS.mp4",
-      gradient: "linear-gradient(135deg,#4c1d95,#a855f7)" },
-    { title: "Food Edit", category: "cinematic", duration: "00:14",
-      video: "Assets/Videos/food edit.mp4",
-      gradient: "linear-gradient(135deg,#4c1d95,#a855f7)" },
-  ];
+      ];
 
   const grid = document.getElementById("video-grid");
   const categoryButtons = document.querySelectorAll(".category-card");
@@ -151,17 +145,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* ---------- Contact form ---------- */
-  const form = document.getElementById("contact-form");
-  const status = document.getElementById("formStatus");
+  /* ---------- Generic form submit handler (contact + review) ---------- */
+  function wireForm(formId, statusId, thanksFn) {
+    const form = document.getElementById(formId);
+    const status = document.getElementById(statusId);
+    if (!form) return;
 
-  if (form) {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
       const submitBtn = form.querySelector("button[type='submit']");
-      const name = document.getElementById("name").value.trim();
-
       if (submitBtn) submitBtn.disabled = true;
       if (status) status.textContent = "Sending...";
 
@@ -173,23 +166,27 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (response.ok) {
-          if (status) {
-            status.textContent = `Thanks${name ? ", " + name : ""} — your message has been sent. I'll reply within 24 hours.`;
-          }
+          if (status) status.textContent = thanksFn(form);
           form.reset();
         } else {
-          if (status) {
-            status.textContent = "Something went wrong — please email me directly instead.";
-          }
+          if (status) status.textContent = "Something went wrong — please email me directly instead.";
         }
       } catch (err) {
-        if (status) {
-          status.textContent = "Network error — please check your connection and try again.";
-        }
+        if (status) status.textContent = "Network error — please check your connection and try again.";
       } finally {
         if (submitBtn) submitBtn.disabled = false;
       }
     });
   }
+
+  wireForm("contact-form", "formStatus", (form) => {
+    const name = form.querySelector("#name")?.value.trim();
+    return `Thanks${name ? ", " + name : ""} — your message has been sent. I'll reply within 24 hours.`;
+  });
+
+  wireForm("review-form", "reviewStatus", (form) => {
+    const name = form.querySelector("#review-name")?.value.trim();
+    return `Thanks${name ? ", " + name : ""} — your review has been submitted!`;
+  });
 
 });

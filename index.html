@@ -26,6 +26,7 @@
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#portfolio">Portfolio</a>
+                <a href="#reviews">Reviews</a>
                 <a href="#services">Services</a>
                 <a href="#contact">Contact</a>
             </nav>
@@ -101,8 +102,60 @@
 
             <div class="sprocket-divider" aria-hidden="true"></div>
 
+            <section id="reviews">
+                <span class="eyebrow">00:03:20:00 &nbsp;/&nbsp; REVIEWS</span>
+                <h2>Client Reviews</h2>
+                <p>Here's what clients have said about working with me — and if you've worked with me too, I'd love to hear from you.</p>
+
+                <div class="reviews-grid" id="reviewsGrid">
+                    <div class="review-empty">No reviews yet — be the first to share your experience below.</div>
+                </div>
+
+                <div class="review-form-wrap">
+                    <h4>Leave a Review</h4>
+                    <p>Worked with me before? Share your experience below.</p>
+                    <form id="review-form" action="https://formspree.io/f/mqevowzn" method="POST">
+                        <input type="hidden" name="form_type" value="Review">
+                        <div class="input-group">
+                            <label for="review-name">Name:</label>
+                            <input
+                            type="text"
+                            id="review-name"
+                            name="name"
+                            placeholder="Enter Your Name"
+                            required
+                            >
+                        </div>
+                        <div class="input-group">
+                            <label>Rating:</label>
+                            <div class="rating-select">
+                                <input type="radio" id="star5" name="rating" value="5" checked><label for="star5">★</label>
+                                <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                                <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                                <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                                <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="review-text">Your Review:</label>
+                            <textarea
+                            name="review"
+                            id="review-text"
+                            rows="4"
+                            placeholder="Tell others about your experience"
+                            required
+                            ></textarea>
+                        </div>
+                        <button type="submit">Submit Review</button>
+                        <p class="form-status" id="reviewStatus" role="status"></p>
+                    </form>
+                </div>
+            </section>
+
+            <div class="sprocket-divider" aria-hidden="true"></div>
+
             <section id="services">
-                <span class="eyebrow">00:03:45:12 &nbsp;/&nbsp; SERVICES</span>
+                <span class="eyebrow">00:04:15:12 &nbsp;/&nbsp; SERVICES</span>
                 <h2>Services</h2>
             <div class="services">
                 <div class="service-card">
@@ -133,7 +186,7 @@
             <section id="contact">
                 <div class="contact-wrap">
                     <div class="contact-info">
-                        <span class="eyebrow">00:04:59:23 &nbsp;/&nbsp; CONTACT</span>
+                        <span class="eyebrow">00:05:29:23 &nbsp;/&nbsp; CONTACT</span>
                         <h2>Contact</h2>
                         <h4>Let's Work Together</h4>
                         <p>Have a project in mind? Let's create something amazing together. Fill out the form and I'll get back to you within 24 hours.</p>
