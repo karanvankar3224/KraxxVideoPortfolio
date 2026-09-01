@@ -41,10 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
   //Portfolio section:-
   const portfolioItems = [
     { title: "Promotional", category: "promotion", duration: "00:42",
-      video: "Assets/Videos/Nexgale edit ver2.mp4",
+      video: "Assets/Videos/Nexgale.mp4",
       gradient: "linear-gradient(135deg,#9a3412,#f97316)" },
     { title: "Saas Animation", category: "motion-graphics", duration: "00:03",
-      video: "Assets/Videos/First Saas Animation.mp4",
+      video: "Assets/Videos/Saas Animation.mp4",
       gradient: "linear-gradient(135deg,#4c1d95,#a855f7)" },
       ];
 
