@@ -46,8 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
     {title: "Saas Animation", category: "motion-graphics", duration: "00:03",
       video: "Assets/Videos/First Saas Animation.mp4",
       gradient: "linear-gradient(135deg,#4c1d95,#a855f7)" },
-     {title: "DZYNER", category: "motion-graphics", duration: "00:52",
-      video: "Assets/Videos/DZYNER2.mp4",
+     {title: "Scanvify", category: "motion-graphics", duration: "00:52",
+      video: "Assets/Videos/scanvify.mp4",
       gradient: "linear-gradient(135deg,#4c1d95,#a855f7)" },
       ];
 
