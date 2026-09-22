@@ -49,6 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
      {title: "Scanvify", category: "motion-graphics", duration: "00:52",
       video: "Assets/Videos/scanvify.mp4",
       gradient: "linear-gradient(135deg,#4c1d95,#a855f7)" },
+    {title: "DZYNER", category: "motion-graphics", duration: "00:52",
+      video: "Assets/Videos/DZYNER.mp4",
+      gradient: "linear-gradient(135deg,#4c1d95,#a855f7)" },
       ];
 
   const grid = document.getElementById("video-grid");
