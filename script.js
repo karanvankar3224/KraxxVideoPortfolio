@@ -52,6 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
     {title: "DZYNER", category: "motion-graphics", duration: "00:52",
       video: "Assets/Videos/DZYNER2.mp4",
       gradient: "linear-gradient(135deg,#4c1d95,#a855f7)" },
+    {title: "ONE STEP", category: "TALKING HEAD", duration: "00:30",
+      video: "Assets/Videos/ONE STEP.mp4",
+      gradient: "linear-gradient(135deg,#4c1d95,#a855f7)" },
       ];
 
   const grid = document.getElementById("video-grid");
