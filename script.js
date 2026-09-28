@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
       video: "Assets/Videos/DZYNER2.mp4",
       gradient: "linear-gradient(135deg,#4c1d95,#a855f7)" },
     {title: "ONE STEP", category: "Talking-Head", duration: "00:30",
-      video: "Assets/Videos/ONE STEP.mp4",
+      video: "Assets/Videos/OneStep.mp4",
       gradient: "linear-gradient(135deg,#4c1d95,#a855f7)" },
       ];
 
